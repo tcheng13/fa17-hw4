@@ -1,0 +1,22 @@
+<% @cats.each do |cat| %>
+  <%= cat.name %>
+<% end %>
+
+<% @users.each do |user| %>
+  <%= user.username %>
+  <%= user.email %>
+  <%= user.age %>
+<% end %>
+
+<% @todos.each do |todo| %>
+  <%= todo.tasks %>
+  <%= todo.finished %>
+<% end %>
+
+<%= form_for @todo do |king| %>
+  <%= king.label :tasks%>
+  <%= king.text_field :tasks%>
+  <%= king.label :finished%>
+  <%= king.text_field :finished%>
+<%= submit_tag("New") %>
+<% end %>
